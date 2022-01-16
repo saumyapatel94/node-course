@@ -11,6 +11,6 @@ module.exports = forecast = (longitude, latitude, callback) => {
             return console.error('Unable to find location. Try another search.');
         }
 
-        callback(undefined, body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degrees out. It feels like ' + body.current.feelslike + ' degrees out');
+        callback(undefined, body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + ' degrees out. It feels like ' + body.current.feelslike + ' degrees out. Humidity is ' + body.current.humidity + '%.');
     });
 }
